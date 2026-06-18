@@ -50,10 +50,6 @@
   box-sizing: border-box;
 }
 
-html {
-  font-size: 100%;
-}
-
 body,
 h1,
 h2,
@@ -74,17 +70,15 @@ body {
   background-color: var(--color-white);
 }
 
-img {
-  display: block;
-  max-width: 100%;
-  height: auto;
-}
-
 img,
 picture,
 svg {
   display: block;
   max-width: 100%;
+}
+
+img {
+  height: auto;
 }
 
 button,
@@ -128,15 +122,15 @@ select {
 
 .recipe-card__title {
   font-family: var(--font-secondary);
-  font-size: 2.25rem;
+  font-size: clamp(2.25rem, 2.05rem + 0.85vw, 2.5rem);
   line-height: 1;
   font-weight: 400;
   color: var(--color-stone-900);
 }
 
 .recipe-card__description {
-  margin-top: 1.5rem;
-  font-size: 1rem;
+  margin-block-start: 1.5rem;
+  font-size: clamp(1rem, 0.96rem + 0.2vw, 1.0625rem);
   line-height: 1.5;
   color: var(--color-stone-600);
 }
@@ -189,7 +183,7 @@ select {
 .ingredients-title {
   margin-bottom: 1.5rem;
   font-family: var(--font-secondary);
-  font-size: 1.75rem;
+  font-size: clamp(1.75rem, 1.65rem + 0.4vw, 1.875rem);
   line-height: 1;
   font-weight: 400;
   color: var(--color-brown-800);
@@ -222,7 +216,7 @@ select {
 .instructions-title {
   margin-bottom: 1.5rem;
   font-family: var(--font-secondary);
-  font-size: 1.75rem;
+  font-size: clamp(1.75rem, 1.65rem + 0.4vw, 1.875rem);
   line-height: 1;
   font-weight: 400;
   color: var(--color-brown-800);
@@ -257,20 +251,20 @@ select {
 
 .nutrition-title {
   font-family: var(--font-secondary);
-  font-size: 1.75rem;
+  font-size: clamp(1.75rem, 1.65rem + 0.4vw, 1.875rem);
   line-height: 1;
   font-weight: 400;
   color: var(--color-brown-800);
 }
 
 .nutrition-text {
-  margin-top: 1.5rem;
+  margin-block-start: 1.5rem;
   color: var(--color-stone-600);
 }
 
 .nutrition-table {
   width: 100%;
-  margin-top: 1rem;
+  margin-block-start: 1rem;
   border-collapse: collapse;
   border-spacing: 0;
 }
@@ -334,15 +328,6 @@ select {
 
   .recipe-card__header {
     padding: 2.5rem 0 0;
-  }
-
-  .recipe-card__title {
-    font-size: 2.5rem;
-    line-height: 1;
-  }
-
-  .recipe-card__description {
-    margin-top: 1.5rem;
   }
 
   .prep-time {
